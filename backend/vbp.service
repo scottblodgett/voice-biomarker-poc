@@ -1,0 +1,14 @@
+[Unit]
+Description=Voice Biomarker POC
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/voice-biomarker-poc/dam
+EnvironmentFile=/home/ubuntu/voice-biomarker-poc/dam/.env
+ExecStart=/home/ubuntu/voice-biomarker-poc/dam/.venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

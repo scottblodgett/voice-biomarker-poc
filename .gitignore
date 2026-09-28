@@ -1,0 +1,19 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# env files anywhere in the repo (kintsugi-ui/ and backend/ also have their own)
+.env
+.env.*
+*.pem
+
+# Recordings and screen captures. A voice sample is biometric data about whoever
+# spoke it, a results screen carries that person's inferred scores, and a capture
+# of a console leaks account identifiers. None of it belongs in git.
+*.wav
+*.mp3
+*.webm
+*.mp4
+*.mov
